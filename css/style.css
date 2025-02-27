@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color:#222;
+    color: white;
+}
+.container h1{
+    font-size: 40px;
+}
+.container p{
+    font-size: 22px;
+}
+.container .title{
+    padding: 11px 18px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .total input{
+    margin-right: 10px;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 30%;
+}
+.container .total input:focus,
+.container .total small:focus,
+.container .title{
+    outline: none;
+
+}
+.container .total small{
+    background-color: brown;
+    color: #ddd;
+    padding: 10px 18px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+@media (max-width:992px) {
+    .container .total{
+        flex-direction: column;
+    }
+    .container .total input{
+        width: 100%;
+        margin: 9px;
+        padding: 10px 18px;
+    }
+    .container .total button{
+        width: 100%;
+        padding: 10px 20px;
+        margin-top: 12px;
+    }
+    
+}
+.container button{
+    color: #ddd;
+    padding: 10px 20px;
+    background-color: brown;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+table th,
+table td{
+    font-size: 20px;
+}
+#delete,
+#update{
+    border: none;
+    margin: 7px 0;
+}
+
+
+@media (max-width: 850px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    th {
+        display: none; /* إخفاء عناوين الأعمدة */
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    td::before {
+        content: attr(data-label); /* استخدام `data-label` كمحتوى قبل كل خلية */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
